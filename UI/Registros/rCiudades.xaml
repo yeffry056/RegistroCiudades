@@ -1,0 +1,43 @@
+﻿<Window x:Class="RegistroCiudades.UI.Registros.rCiudades"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroCiudades.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Ciudades" Height="235" Width="286" Icon="/Resources/icono.icon.png">
+    <Grid>
+        <Label Content="Ciudad Id" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextCiudadID" HorizontalAlignment="Left" Margin="10,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" Text="{Binding CiudadId}"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextNombre" HorizontalAlignment="Left" Margin="10,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Text="{Binding Nombre}"/>
+        <Button  HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" Click="BtnNuevo">
+            <StackPanel Orientation="Horizontal">
+
+                <Image Source="/Resources/nuevo.png" Stretch="Uniform" Width="15" Height="15" />
+                <Label Content="Nuevo" Width="36" Height="20" Margin="-3,-3,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="9" />
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="67,149,0,0" VerticalAlignment="Top" Click="BtnGuardar">
+            <StackPanel Orientation="Horizontal">
+
+                <Image Source="/Resources/Guardar.png" Width="15" />
+                <Label Content="Guardar" FontSize="9" Margin="-3,-3,0,0" Width="42" Height="20"/>
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="130,149,0,0" VerticalAlignment="Top" Click="BtnEliminar">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Eliminar.png" Width="15" />
+                <Label Content="Eliminar" FontSize="9" Width="41.6" Height="20" Margin="-3,-3,0,0" />
+            </StackPanel>
+        </Button>
+        <Button  HorizontalAlignment="Left" Margin="76,43,0,0" VerticalAlignment="Top" Click="BtnBuscar" Height="18" >
+            <StackPanel Orientation="Horizontal">
+
+                <Image Source="/Resources/buscar.png" Width="15" Height="13" Margin="0,-2,0,0" />
+                <Label Content="Buscar" FontSize="9" Margin="-3,-4.5,0,-2" />
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>
